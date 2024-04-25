@@ -22,7 +22,7 @@ namespace ApplicationsLogger.Adapters.Controllers
         [HttpGet]
         public IActionResult GetAllMovies()
         {
-            var moviesColletction = _collection.Find(new BsonDocument()).Limit(1).ToList();
+            var moviesColletction = _collection.Find(new BsonDocument()).ToList();
 
             return Ok(moviesColletction);
         }
